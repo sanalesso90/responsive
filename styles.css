@@ -69,7 +69,6 @@ nav:hover {
 
 .nav-links a::before {
     background-color: #8F7B24;
-    height: 2px;
     height: 1px;
     bottom: -1px;
     transform-origin: 100% 50%;
@@ -104,8 +103,6 @@ nav:hover {
 .nav-links a:hover span {
     transform: translate3d(0, -100%, 0);
 }
-
-/* Rest of the CSS remains the same */
 
 .hero {
     height: 90vh;
@@ -181,6 +178,35 @@ nav:hover {
 
     .nav-links a {
         font-size: 30px;
+    }
+
+    /* Mobile-specific styles for nav links */
+    .nav-links a::before {
+        background-color: #8F7B24;
+        height: 2px;
+        bottom: 0;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links a::after {
+        content: none;
+    }
+
+    .nav-links a:hover::before {
+        transform: scaleX(1);
+    }
+
+    .nav-links a:hover::after {
+        transform: none;
+    }
+
+    .nav-links a span {
+        transition: none;
+    }
+
+    .nav-links a:hover span {
+        transform: none;
     }
 
     .burger {
