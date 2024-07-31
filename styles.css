@@ -16,7 +16,8 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 10vh;
+    height: 10vh; /* Fallback for browsers that don't support dvh */
+    height: 10dvh;
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -75,8 +76,10 @@ nav {
 }
 
 .hero {
-    height: 90vh;
-    margin-top: 10vh;
+    height: 90vh; /* Fallback for browsers that don't support dvh */
+    height: 90dvh;
+    margin-top: 10vh; /* Fallback for browsers that don't support dvh */
+    margin-top: 10dvh;
     position: relative;
     overflow: hidden;
 }
@@ -124,8 +127,10 @@ nav {
     .nav-links {
         position: absolute;
         right: 0px;
-        height: 90vh;
-        top: 10vh;
+        height: 90vh; /* Fallback for browsers that don't support dvh */
+        height: 90dvh;
+        top: 10vh; /* Fallback for browsers that don't support dvh */
+        top: 10dvh;
         background-color: white;
         display: flex;
         flex-direction: column;
