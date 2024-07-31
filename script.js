@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         carouselItems[currentItem].classList.add('active');
     }
 
-    setInterval(showNextItem, 5000); // Change image every 5 seconds
+    setInterval(showNextItem, 4000); // Change image every 5 seconds
 
     // Burger menu functionality
     const burger = document.querySelector('.burger');
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
             }
         });
+    
 
         // Burger Animation
         burger.classList.toggle('toggle');
