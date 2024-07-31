@@ -16,15 +16,22 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 10vh; /* Fallback for browsers that don't support dvh */
+    height: 10vh;
     height: 10dvh;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5vw;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+nav:hover {
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .logo {
@@ -76,9 +83,9 @@ nav {
 }
 
 .hero {
-    height: 90vh; /* Fallback for browsers that don't support dvh */
+    height: 90vh;
     height: 90dvh;
-    margin-top: 10vh; /* Fallback for browsers that don't support dvh */
+    margin-top: 10vh;
     margin-top: 10dvh;
     position: relative;
     overflow: hidden;
@@ -97,17 +104,16 @@ nav {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
 }
 
 .carousel-item.active {
     opacity: 1;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    transform: scale(1);
 }
 
 .burger {
@@ -127,11 +133,13 @@ nav {
     .nav-links {
         position: absolute;
         right: 0px;
-        height: 90vh; /* Fallback for browsers that don't support dvh */
+        height: 90vh;
         height: 90dvh;
-        top: 10vh; /* Fallback for browsers that don't support dvh */
+        top: 10vh;
         top: 10dvh;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         display: flex;
         flex-direction: column;
         justify-content: center;
